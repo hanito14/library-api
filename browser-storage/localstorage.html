@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage</title>
+  </head>
+  <body>
+    <button id="crear">Crear</button>
+    <button id="consultar">Consultar</button>
+    <button id="modificar">Modificar</button>
+    <button id="eliminar">Eliminar</button>
+
+    <script>
+      document.getElementById("crear").addEventListener("click", crear);
+      document.getElementById("consultar").addEventListener("click", consultar);
+      document.getElementById("modificar").addEventListener("click", modificar);
+      document.getElementById("eliminar").addEventListener("click", eliminar);
+
+      function crear() {
+        localStorage.setItem("access-token", "qwertyuiop");
+      }
+
+      function consultar() {
+        alert(localStorage.getItem("access-token"));
+      }
+
+      function modificar() {
+        localStorage.setItem("access-token", "asdfghjkln");
+      }
+
+      function eliminar() {
+        localStorage.removeItem("access-token");
+      }
+    </script>
+  </body>
+</html>

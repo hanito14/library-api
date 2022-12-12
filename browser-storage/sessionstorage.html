@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SessionStorage</title>
+  </head>
+  <body>
+    <button id="crear">Crear</button>
+    <button id="consultar">Consultar</button>
+    <button id="modificar">Modificar</button>
+    <button id="eliminar">Eliminar</button>
+
+    <script>
+      document.getElementById("crear").addEventListener("click", crear);
+      document.getElementById("consultar").addEventListener("click", consultar);
+      document.getElementById("modificar").addEventListener("click", modificar);
+      document.getElementById("eliminar").addEventListener("click", eliminar);
+
+      function crear() {
+        sessionStorage.setItem("name", "Hannah");
+      }
+
+      function consultar() {
+        alert(sessionStorage.getItem("name"));
+      }
+
+      function modificar() {
+        sessionStorage.setItem("name", "Julie");
+      }
+
+      function eliminar() {
+        sessionStorage.removeItem("name");
+      }
+    </script>
+  </body>
+</html>
